@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Feeding time:</b>
+  <%= @feeding.feeding_time %>
+</p>
+
+<p>
+  <b>Feeding type:</b>
+  <%= @feeding.feeding_type_id %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @feeding.amount %>
+</p>
+
+<p>
+  <b>Unit:</b>
+  <%= @feeding.unit %>
+</p>
+
+
+<%= link_to 'Edit', edit_feeding_path(@feeding) %> |
+<%= link_to 'Back', feedings_path %>

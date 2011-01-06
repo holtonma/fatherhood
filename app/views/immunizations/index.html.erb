@@ -1,0 +1,25 @@
+<h1>Listing immunizations</h1>
+
+<table>
+  <tr>
+    <th>Doctor visit</th>
+    <th>Note</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @immunizations.each do |immunization| %>
+  <tr>
+    <td><%= immunization.doctor_visit_id %></td>
+    <td><%= immunization.note_id %></td>
+    <td><%= link_to 'Show', immunization %></td>
+    <td><%= link_to 'Edit', edit_immunization_path(immunization) %></td>
+    <td><%= link_to 'Destroy', immunization, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Immunization', new_immunization_path %>

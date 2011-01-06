@@ -1,0 +1,27 @@
+<h1>Listing diapers</h1>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Note</th>
+    <th>Diaper change time</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @diapers.each do |diaper| %>
+  <tr>
+    <td><%= diaper.type %></td>
+    <td><%= diaper.note_id %></td>
+    <td><%= diaper.diaper_change_time %></td>
+    <td><%= link_to 'Show', diaper %></td>
+    <td><%= link_to 'Edit', edit_diaper_path(diaper) %></td>
+    <td><%= link_to 'Destroy', diaper, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Diaper', new_diaper_path %>

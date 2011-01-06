@@ -1,0 +1,29 @@
+<%= form_for(@diaper) do |f| %>
+  <% if @diaper.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@diaper.errors.count, "error") %> prohibited this diaper from being saved:</h2>
+
+      <ul>
+      <% @diaper.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :note_id %><br />
+    <%= f.text_field :note_id %>
+  </div>
+  <div class="field">
+    <%= f.label :diaper_change_time %><br />
+    <%= f.datetime_select :diaper_change_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

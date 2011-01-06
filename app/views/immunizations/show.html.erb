@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Doctor visit:</b>
+  <%= @immunization.doctor_visit_id %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @immunization.note_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_immunization_path(@immunization) %> |
+<%= link_to 'Back', immunizations_path %>

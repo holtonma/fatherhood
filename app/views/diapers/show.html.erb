@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Type:</b>
+  <%= @diaper.type %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @diaper.note_id %>
+</p>
+
+<p>
+  <b>Diaper change time:</b>
+  <%= @diaper.diaper_change_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_diaper_path(@diaper) %> |
+<%= link_to 'Back', diapers_path %>

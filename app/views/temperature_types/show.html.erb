@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @temperature_type.name %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @temperature_type.note_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_temperature_type_path(@temperature_type) %> |
+<%= link_to 'Back', temperature_types_path %>

@@ -1,4 +1,20 @@
 Fatherhood::Application.routes.draw do
+  resources :diapers
+
+  resources :notes
+
+  resources :doctor_visits
+
+  resources :doctors
+
+  resources :feedings
+
+  resources :immunizations
+
+  resources :temperatures
+
+  resources :temperature_types
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

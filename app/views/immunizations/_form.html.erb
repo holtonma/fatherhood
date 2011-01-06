@@ -1,0 +1,25 @@
+<%= form_for(@immunization) do |f| %>
+  <% if @immunization.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@immunization.errors.count, "error") %> prohibited this immunization from being saved:</h2>
+
+      <ul>
+      <% @immunization.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :doctor_visit_id %><br />
+    <%= f.text_field :doctor_visit_id %>
+  </div>
+  <div class="field">
+    <%= f.label :note_id %><br />
+    <%= f.text_field :note_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

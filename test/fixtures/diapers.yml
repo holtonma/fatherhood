@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  type: MyString
+  note_id: 1
+  diaper_change_time: 2011-01-05 21:42:27
+
+two:
+  type: MyString
+  note_id: 1
+  diaper_change_time: 2011-01-05 21:42:27

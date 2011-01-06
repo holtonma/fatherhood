@@ -1,0 +1,2 @@
+module DiapersHelper
+end

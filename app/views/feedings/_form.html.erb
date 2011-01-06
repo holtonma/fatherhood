@@ -1,0 +1,33 @@
+<%= form_for(@feeding) do |f| %>
+  <% if @feeding.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@feeding.errors.count, "error") %> prohibited this feeding from being saved:</h2>
+
+      <ul>
+      <% @feeding.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :feeding_time %><br />
+    <%= f.datetime_select :feeding_time %>
+  </div>
+  <div class="field">
+    <%= f.label :feeding_type_id %><br />
+    <%= f.text_field :feeding_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :unit %><br />
+    <%= f.text_field :unit %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
