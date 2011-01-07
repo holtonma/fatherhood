@@ -2,7 +2,7 @@ class DoctorVisitsController < ApplicationController
   # GET /doctor_visits
   # GET /doctor_visits.xml
   def index
-    @doctor_visits = DoctorVisit.all
+    @doctor_visits = DoctorVisit.all(:order => "id DESC")
 
     respond_to do |format|
       format.html # index.html.erb

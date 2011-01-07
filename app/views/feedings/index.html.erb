@@ -1,29 +1,37 @@
-<h1>Listing feedings</h1>
 
-<table>
-  <tr>
-    <th>Feeding time</th>
-    <th>Feeding type</th>
-    <th>Amount</th>
-    <th>Unit</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="one_column">
+  <div class="header">
+  </div>
+  <div class="content">
+    <h1>Listing feedings</h1>
 
-<% @feedings.each do |feeding| %>
-  <tr>
-    <td><%= feeding.feeding_time %></td>
-    <td><%= feeding.feeding_type_id %></td>
-    <td><%= feeding.amount %></td>
-    <td><%= feeding.unit %></td>
-    <td><%= link_to 'Show', feeding %></td>
-    <td><%= link_to 'Edit', edit_feeding_path(feeding) %></td>
-    <td><%= link_to 'Destroy', feeding, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+    <table>
+      <tr>
+        <th>Feeding time</th>
+        <th>Feeding type</th>
+        <th>Amount</th>
+        <th>Unit</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
 
-<br />
+    <% @feedings.each do |feeding| %>
+      <tr>
+        <td><%= feeding.feeding_time %></td>
+        <td><%= feeding.feeding_type_id %></td>
+        <td><%= feeding.amount %></td>
+        <td><%= feeding.unit %></td>
+        <td><%= link_to 'Show', feeding %></td>
+        <td><%= link_to 'Edit', edit_feeding_path(feeding) %></td>
+        <td><%= link_to 'Destroy', feeding, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+    </table>
 
-<%= link_to 'New Feeding', new_feeding_path %>
+    <br />
+
+    <%= link_to 'New Feeding', new_feeding_path %>
+    
+  </div>
+</div>

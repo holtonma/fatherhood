@@ -1,0 +1,76 @@
+
+<!-- Begin one column box -->
+<div class="onecolumn">  
+	<div class="header">
+		<h2>Graph</h2>
+	
+		<!-- Begin 2nd level tab -->
+		<ul class="second_level_tab">
+		  <% @months.each do |month| %>
+			  <li>
+	        <% if @this_month == month %>
+	          <% cssclass = "active" %>
+	        <% else %> 
+	          <% cssclass = "" %>
+	        <% end %>
+			    <%= link_to month, "", :class => "#{cssclass}" %>
+			  </li>
+			<% end %>
+		</ul><!-- End 2nd level tab -->
+	</div> <!-- End header -->
+
+	<div class="content">
+		<div id="graph_wrapper" class="graph_wrapper"></div>
+		  <table id="graph_data" class="data" style="display:none" cellpadding="0" cellspacing="0" width="100%">
+  			<caption>2009/2010 Sales by industry (Million)</caption>
+  			<thead>
+  				<tr>
+
+  					<td class="no_input">&nbsp;</td>
+  					<th>Accounting</th>
+  					<th>Banking</th>
+  					<th>Beauty Care</th>
+  					<th>Insurance</th>
+  					<th>Internet</th>
+
+  					<th>Media</th>
+  					<th>Telecomm</th>
+  					<th>Transportation</th>
+  				</tr>
+  			</thead>
+		
+  			<tbody>
+  				<tr>
+
+  					<th>2009</th>
+  					<td>10</td>
+  					<td>3</td>
+  					<td>4</td>
+  					<td>9</td>
+  					<td>14</td>
+
+  					<td>2</td>
+  					<td>7</td>
+  					<td>12</td>
+  				</tr>
+			
+  				<tr>
+  					<th>2010</th>
+  					<td>12</td>
+
+  					<td>5</td>
+  					<td>5</td>
+  					<td>6</td>
+  					<td>11</td>
+  					<td>7</td>
+  					<td>9</td>
+
+  					<td>16</td>
+  				</tr>
+			
+  			</tbody>
+  		</table>
+	  </div> <!-- End graph_wrapper -->
+  </div> <!-- End content -->
+</div> <!-- End One column -->
+

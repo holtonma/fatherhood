@@ -1,0 +1,21 @@
+<!-- Begin main menu -->
+<div id="menu_wrapper">
+	<ul class="nav">
+		<li><%= link_to "Home", root_path(), 
+		        :class => tab_class(controller.controller_name, "home") %></li>
+		<li><%= link_to "Feedings", feedings_path(), 
+		        :class => tab_class(controller.controller_name, "feedings") %></li>
+		<li><%= link_to "Diapers Changes", diapers_path(), 
+		        :class => tab_class(controller.controller_name, "diapers") %></li>
+    <li><%= link_to "Doctor Visits", doctor_visits_path(), 
+            :class => tab_class(controller.controller_name, "doctor_visits") %></li>
+    <li><%= link_to "Immunizations", immunizations_path(), :class => "" %></li>
+	</ul>
+	
+	<div id="search">
+		<form action="/" id="search_form" name="search_form" method="get">
+			<p><input type="text" id="q" name="q" title="Search" class="search noshadow"/></p>
+		</form>
+	</div>
+	
+</div><!-- End main menu -->

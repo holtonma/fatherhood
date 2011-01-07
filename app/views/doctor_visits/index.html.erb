@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>ID</th>
     <th>Date</th>
     <th>Note</th>
     <th>Doctor</th>
@@ -12,6 +13,7 @@
 
 <% @doctor_visits.each do |doctor_visit| %>
   <tr>
+    <td><%= doctor_visit.id %></td>
     <td><%= doctor_visit.date %></td>
     <td><%= doctor_visit.note_id %></td>
     <td><%= doctor_visit.doctor_id %></td>

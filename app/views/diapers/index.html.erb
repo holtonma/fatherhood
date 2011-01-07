@@ -1,8 +1,10 @@
 <h1>Listing diapers</h1>
 
+<%= render 'layouts/left_nav' %>
+
 <table>
   <tr>
-    <th>Type</th>
+    <th>Reason for Change</th>
     <th>Note</th>
     <th>Diaper change time</th>
     <th></th>
@@ -12,8 +14,8 @@
 
 <% @diapers.each do |diaper| %>
   <tr>
-    <td><%= diaper.type %></td>
-    <td><%= diaper.note_id %></td>
+    <td><%= diaper.result %></td>
+    <td><%= diaper.note %></td>
     <td><%= diaper.diaper_change_time %></td>
     <td><%= link_to 'Show', diaper %></td>
     <td><%= link_to 'Edit', edit_diaper_path(diaper) %></td>

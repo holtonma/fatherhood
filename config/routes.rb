@@ -1,20 +1,18 @@
 Fatherhood::Application.routes.draw do
+  
+  resources :feeding_types
+
   resources :diapers
-
   resources :notes
-
   resources :doctor_visits
-
   resources :doctors
-
   resources :feedings
-
   resources :immunizations
-
   resources :temperatures
-
   resources :temperature_types
-
+  
+  get "dev/halp"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -64,7 +62,7 @@ Fatherhood::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 

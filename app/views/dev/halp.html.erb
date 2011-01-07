@@ -1,0 +1,625 @@
+<!DOCTYPE HTML>
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Fatherhood</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="/styles/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="/styles/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="/styles/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Fatherhood&rdquo;</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Fatherhood&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 01/07/2010<br>
+					By: RedGrind, LLC<br>
+					Email: <a href="mailto:holtonma@gmail.com">holtonma@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/peerapong">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#psdFiles">PSD Files</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure (web version)</strong> - <a href="#toc">top</a></h3>
+		<p>This template have a liquid layout width at 100%. All the elements in the code are named with appropriate IDs and Classes, so you can easily find what you need to edit in the HTML and the CSS.</p>
+		
+		<hr>
+		
+		<strong>Top bar</strong><br/>
+		
+		<p><img src="/images/1.png"/></p>
+		
+		On the top, there is a div with ID of "top_bar". This is the holder for the of the website and the account menu:
+		
+<pre>
+&lt;div id=&quot;top_bar&quot;&gt;
+	&lt;div class=&quot;logo&quot;&gt;
+	    &lt;img src=&quot;images/logo.png&quot; alt=&quot;&quot;/&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;account&quot;&gt;
+	    &lt;div class=&quot;detail&quot;&gt;
+	    	Hello &lt;a href=&quot;&quot;&gt;&lt;strong&gt;Admin&lt;/strong&gt;&lt;/a&gt;
+	    &lt;/div&gt;
+	    &lt;ul class=&quot;icon&quot;&gt;
+	    	&lt;li&gt;
+	    		&lt;a href=&quot;&quot; title=&quot;Message&quot;&gt;
+	    			&lt;img src=&quot;images/icon_message.png&quot; alt=&quot;&quot; class=&quot;middle&quot;/&gt;
+	    		&lt;/a&gt;
+	    	&lt;/li&gt;
+	    	&lt;li&gt;
+	    		&lt;a href=&quot;&quot; title=&quot;Setting&quot;&gt;
+	    			&lt;img src=&quot;images/icon_setting.png&quot; alt=&quot;&quot; class=&quot;middle&quot;/&gt;
+	    		&lt;/a&gt;
+	    	&lt;/li&gt;
+	    	&lt;li&gt;
+	    		&lt;a href=&quot;&quot; title=&quot;Logout&quot;&gt;
+	    			&lt;img src=&quot;images/icon_logout.png&quot; alt=&quot;&quot; class=&quot;middle&quot;/&gt;
+	    		&lt;/a&gt;
+	    	&lt;/li&gt;
+	    &lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+		<br/>
+		<p>To add you logo simply change image inside div class name "logo" and the account menu contain inside ul class name "icon".</p>
+		
+		<strong>Menu</strong><br/>
+		
+		<p><img src="/images/2.png"/></p>
+		
+		<p>Menu contain inside a div with ID of "menu_wrapper" and ul class name "nav" below is example of code</p>
+
+<pre>
+&lt;ul class=&quot;nav&quot;&gt;
+	&lt;li&gt;
+	    &lt;a href=&quot;&quot; class=&quot;active&quot;&gt;
+	    	Home
+	    &lt;/a&gt;
+	&lt;/li&gt;
+	...
+</pre>
+
+	<p>Above code wil create one menu name "Home" which is an active menu since it has class name "active"</p>
+	
+	<strong>Sub Menu</strong><br/>
+	
+	<p>To add sub menu popup when user click is easy. Below is example code</p>
+	
+<pre>
+&lt;li&gt;
+&lt;a href=&quot;&quot;&gt;
+    Users
+&lt;/a&gt;
+&lt;div class=&quot;popup&quot;&gt;
+    &lt;div class=&quot;top&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+    	&lt;ul class=&quot;submenu&quot;&gt;
+    		&lt;li&gt;
+    			&lt;a href=&quot;&quot;&gt;
+    				Add Users
+    			&lt;/a&gt;
+    		&lt;/li&gt;
+    		&lt;li&gt;
+    			&lt;a href=&quot;&quot;&gt;
+    				Manage Users
+    			&lt;/a&gt;
+    		&lt;/li&gt;
+    		&lt;li&gt;
+    			&lt;a href=&quot;&quot;&gt;
+    				Delete Users
+    			&lt;/a&gt;
+    		&lt;/li&gt;
+    	&lt;/ul&gt;
+    	&lt;br class=&quot;clear&quot;/&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+</pre>
+
+	<p>All submenu popup contain inside a div class name "popup" and each items are inside ul class name "submenu".</p>
+	
+	<strong>Shortcut</strong><br/>
+	
+	<p><img src="/images/3.png"/></p>
+	
+	<p>The shortcut menu is on the left side of panel. All items contain inside ul ID of "shortcut_item" and class name "items". Below is example code</p>
+	
+<pre>
+&lt;ul id=&quot;shortcut_item&quot; class=&quot;items&quot;&gt;
+	&lt;li&gt;
+	    &lt;a href=&quot;&quot; title=&quot;Calendar&quot;&gt;
+	    	&lt;img src=&quot;example/icon_calendar.png&quot; alt=&quot;&quot;/&gt;
+	    &lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	    &lt;a href=&quot;&quot; title=&quot;Contact&quot;&gt;
+	    	&lt;img src=&quot;example/icon_contact.png&quot; alt=&quot;&quot;/&gt;
+	    &lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	    &lt;a href=&quot;&quot; title=&quot;Chart&quot;&gt;
+	    	&lt;img src=&quot;example/icon_chart.png&quot; alt=&quot;&quot;/&gt;
+	    &lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	    &lt;a href=&quot;&quot; title=&quot;Note&quot;&gt;
+	    	&lt;img src=&quot;example/icon_note.png&quot; alt=&quot;&quot;/&gt;
+	    &lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	    &lt;a href=&quot;&quot; title=&quot;Network&quot;&gt;
+	    	&lt;img src=&quot;example/icon_network.png&quot; alt=&quot;&quot;/&gt;
+	    &lt;/a&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+	<p>All images using in shortcut has maximum width of 40px and maximum of height 40px.</p>
+	
+	<strong>Graph</strong><br/>
+	
+	<p><img src="/images/4.png"/></p>
+	
+	<p>Basically graph created by data in certain table and draw inside div. Below is example code</p>
+	
+	<strong>Example table</strong>
+	
+<pre>
+&lt;table id=&quot;graph_data&quot; class=&quot;data&quot; style=&quot;display:none&quot; rel=&quot;bar&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot;&gt;
+	&lt;caption&gt;2009/2010 Sales by industry (Million)&lt;/caption&gt;
+	&lt;thead&gt;
+	    &lt;tr&gt;
+	    	&lt;td class=&quot;no_input&quot;&gt;&amp;nbsp;&lt;/td&gt;
+	    	&lt;th&gt;Accounting&lt;/th&gt;
+	    	&lt;th&gt;Banking&lt;/th&gt;
+	    	&lt;th&gt;Beauty Care&lt;/th&gt;
+	    	&lt;th&gt;Insurance&lt;/th&gt;
+	    	&lt;th&gt;Internet&lt;/th&gt;
+	    	&lt;th&gt;Media&lt;/th&gt;
+	    	&lt;th&gt;Telecomm&lt;/th&gt;
+	    	&lt;th&gt;Transportation&lt;/th&gt;
+	    &lt;/tr&gt;
+	&lt;/thead&gt;
+	
+	&lt;tbody&gt;
+	    &lt;tr&gt;
+	    	&lt;th&gt;2009&lt;/th&gt;
+	    	&lt;td&gt;10&lt;/td&gt;
+	    	&lt;td&gt;3&lt;/td&gt;
+	    	&lt;td&gt;4&lt;/td&gt;
+	    	&lt;td&gt;9&lt;/td&gt;
+	    	&lt;td&gt;14&lt;/td&gt;
+	    	&lt;td&gt;2&lt;/td&gt;
+	    	&lt;td&gt;7&lt;/td&gt;
+	    	&lt;td&gt;12&lt;/td&gt;
+	    &lt;/tr&gt;
+	    
+	    &lt;tr&gt;
+	    	&lt;th&gt;2010&lt;/th&gt;
+	    	&lt;td&gt;12&lt;/td&gt;
+	    	&lt;td&gt;5&lt;/td&gt;
+	    	&lt;td&gt;5&lt;/td&gt;
+	    	&lt;td&gt;6&lt;/td&gt;
+	    	&lt;td&gt;11&lt;/td&gt;
+	    	&lt;td&gt;7&lt;/td&gt;
+	    	&lt;td&gt;9&lt;/td&gt;
+	    	&lt;td&gt;16&lt;/td&gt;
+	    &lt;/tr&gt;
+	    
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+
+	<p>Then we need to add a div which the graph will draw here. For example</p>
+
+<pre>
+&lt;div id=&quot;graph_wrapper&quot; class=&quot;graph_wrapper&quot;&gt;&lt;/div&gt;
+</pre>
+
+	<p>So you have a table and drawing area then add javascript below</p>
+	
+<pre>
+$('#graph_data').visualize({
+	type: 'line',
+	width: '760px',
+	height: '240px',
+	colors: ['#26ADE4', '#D1E751']
+}).appendTo('#graph_wrapper');
+</pre>
+
+	<p>'#graph_data' is the ID of table and '#graph_wrapper' is the ID of drawing area. The options 'type' are line, bar, area and pie</p>
+	
+	<strong>1st level tab</strong>
+	
+	<p><img src="/images/5.png"/></p>
+	
+	<p>First level tab is contain inside ul class name "first_level_tab". Below is example code</p>
+	
+<pre>
+&lt;ul class=&quot;first_level_tab&quot;&gt;
+	&lt;li&gt;
+	    &lt;a href=&quot;&quot; class=&quot;active&quot;&gt;
+	    	Pages data
+	    &lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	    &lt;a href=&quot;&quot;&gt;
+	    	Graph
+	    &lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	    &lt;a href=&quot;&quot;&gt;
+	    	Form Elements
+	    &lt;/a&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+	<p>Example will create 3 tabs and the active one has class name "active".</p>
+	
+	<strong>2nd level tab</strong>
+	
+	<p><img src="/images/6.png"/></p>
+	
+	<p>Second level tab is contain inside ul class name "second_level_tab". Below is example code</p>
+	
+<pre>
+&lt;ul class=&quot;second_level_tab&quot;&gt;
+	&lt;li&gt;
+	    &lt;a href=&quot;&quot;&gt;
+	    	Normal Tab
+	    &lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	    &lt;a href=&quot;&quot; class=&quot;active&quot;&gt;
+	    	Selected
+	    &lt;/a&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+	
+	<strong>Styled Table</strong><br/>
+	
+	<p>The styled table, you can easily using it by adding class name "global" to table tag.</p>
+	
+	
+	<strong>Pagination</strong><br/>
+	
+	<p><img src="/images/7.png"/></p>
+	
+	<p>Below is example code</p>
+	
+<pre>
+&lt;div class=&quot;pagination&quot;&gt;
+	&lt;a href=&quot;#&quot;&gt;&Acirc;&laquo;&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;1&lt;/a&gt;
+	&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;
+	&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;
+	&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;
+	&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;
+	&lt;a href=&quot;#&quot;&gt;6&lt;/a&gt;
+	&lt;a href=&quot;#&quot;&gt;&Acirc;&raquo;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+	<strong>Date picker input</strong><br/>
+
+	<p><img src="/images/8.png"/></p>
+	
+	<p>The date picker input is already in beautiful style. Below is example code</p>
+	
+<pre>
+&lt;div class=&quot;date&quot;&gt;
+	&lt;div class=&quot;text&quot;&gt;&lt;/div&gt;
+	&lt;input type=&quot;text&quot; id=&quot;datepicker&quot;/&gt;
+&lt;/div&gt;
+</pre>
+
+	<p>Then you need to add a javascript. Example</p>
+	
+<pre>
+$("#datepicker").datepicker({
+	nextText: '&raquo;',
+	prevText: '&laquo;',
+	showAnim: 'slideDown'
+});
+</pre>
+
+	<p>'#datepicker' is the ID of your input.</p>
+	
+	<strong>Select input</strong><br/>
+
+	<p><img src="/images/9.png"/></p>
+	
+	<p>The select input is already in beautiful style. Below is example code</p>
+	
+<pre>
+&lt;div class=&quot;option&quot;&gt;
+	&lt;div class=&quot;text&quot;&gt;&lt;/div&gt;
+	&lt;select id=&quot;sample_select&quot;&gt;
+        &lt;optgroup label=&quot;Apple&quot;&gt;
+        	&lt;option&gt;iPad&lt;/option&gt;
+        	&lt;option&gt;iPhone&lt;/option&gt;
+        	&lt;option&gt;Macbook&lt;/option&gt;
+        &lt;/optgroup&gt;
+        &lt;optgroup label=&quot;Microsoft&quot;&gt;
+        	&lt;option&gt;Window 7&lt;/option&gt;
+        	&lt;option&gt;Zune&lt;/option&gt;
+        	&lt;option&gt;XBox 360&lt;/option&gt;
+        &lt;/optgroup&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+</pre>
+
+	<strong>File input</strong><br/>
+
+	<p><img src="/images/10.png"/></p>
+	
+	<p>The file input is already in beautiful style. Below is example code</p>
+	
+<pre>
+&lt;div class=&quot;file&quot;&gt;
+	&lt;div class=&quot;text&quot;&gt;&lt;/div&gt;
+	&lt;input type=&quot;file&quot;/&gt;
+&lt;/div&gt;
+</pre>
+
+	<strong>WYSIWYG input</strong><br/>
+
+	<p><img src="/images/11.png"/></p>
+	
+	<p>To add more WYSIWYG to your texarea simply add below javascript</p>
+	
+<pre>
+$('#wysiwyg').wysiwyg({
+    css : "css/wysiwyg.css"
+});
+</pre>
+
+	<p>'#wysiwyg' is the ID of your textarea.</p>
+	
+	<strong>Image organizatio</strong><br/>
+
+	<p><img src="/images/12.png"/></p>
+	
+	<p>All images are inside ul class name "media_photos" .Example HTML</p>
+	
+<pre>
+&lt;ul class=&quot;media_photos&quot;&gt;
+	&lt;li&gt;
+	      &lt;a rel=&quot;slide&quot; href=&quot;example/1.jpg&quot; title=&quot;Kobe, Osaka and Kyoto JAPAN&quot;&gt;
+	      	&lt;img src=&quot;example/1_t.jpg&quot; alt=&quot;Kobe, Osaka and Kyoto JAPAN&quot;/&gt;
+	      &lt;/a&gt;
+	      &lt;span class=&quot;action&quot;&gt;
+	      	&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;images/icon_edit.png&quot; alt=&quot;edit&quot; class=&quot;help&quot; title=&quot;Edit&quot;/&gt;&lt;/a&gt;
+	    	&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;images/icon_delete.png&quot; alt=&quot;delete&quot; class=&quot;help&quot; title=&quot;Delete&quot;/&gt;&lt;/a&gt;
+	      &lt;/span&gt;
+	&lt;/li&gt;
+	...
+</pre>
+
+	<h3><strong>HTML Structure (mobile version)</strong> - <a href="#toc">top</a></h3>
+		<p>This template have a liquid layout width at 100% and optimize for mobile device. All the elements in the code are named with appropriate IDs and Classes, so you can easily find what you need to edit in the HTML and the CSS.</p>
+		
+		<strong>Dashboard</strong>
+		
+		<p><img src="/images/13.png"/></p>
+		
+		<p>The dashboard menu is inside ul class name "shortcut_item". Below is example code</p>
+		
+<pre>
+&lt;ul id=&quot;shortcut_item&quot; class=&quot;items&quot;&gt;
+	&lt;li&gt;
+	    &lt;a href=&quot;list_items.html&quot; title=&quot;List items&quot;&gt;
+	    	&lt;img src=&quot;example/icon_contact.png&quot; alt=&quot;&quot;/&gt;
+	    &lt;/a&gt;&lt;br class=&quot;clear&quot;/&gt;
+	    &lt;span class=&quot;title&quot;&gt;List items&lt;/span&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	    &lt;a href=&quot;item_detail.html&quot; title=&quot;Item detail&quot;&gt;
+	    	&lt;img src=&quot;example/icon_detail.png&quot; alt=&quot;&quot;/&gt;
+	    &lt;/a&gt;&lt;br class=&quot;clear&quot;/&gt;
+	    &lt;span class=&quot;title&quot;&gt;Item detail&lt;/span&gt;
+	&lt;/li&gt;
+	...
+</pre>
+
+		<strong>Header</strong>
+		
+		<p><img src="/images/14.png"/></p>
+		
+		<p>The header is inside a div ID of "top_bar" . Below is example code</p>
+		
+<pre>
+&lt;div id=&quot;top_bar&quot;&gt;
+	&lt;div class=&quot;inner&quot;&gt;
+	    &lt;h1&gt;
+	    	&lt;a href=&quot;list_data.html&quot;&gt;
+	    		List items
+	    	&lt;/a&gt;
+	    &lt;/h1&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;home&quot;&gt;
+	    &lt;a href=&quot;home.html&quot;&gt;
+	    	&lt;img src=&quot;images/icon_home.png&quot; alt=&quot;&quot; width=&quot;40&quot; height=&quot;40&quot;/&gt;
+	    &lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+		<strong>List items</strong>
+		
+		<p><img src="/images/15.png"/></p>
+		
+		<p>The list items is inside a ul class name "list_data". Below is example code</p>
+		
+<pre>
+&lt;ul class=&quot;list_data&quot;&gt;
+		&lt;li&gt;
+		    &lt;a href=&quot;&quot;&gt;
+		    	&lt;span class=&quot;header&quot;&gt;This is header text&lt;/span&gt;&lt;br/&gt;
+		    	&lt;span class=&quot;description&quot;&gt;Description goes here... sectetur&lt;/span&gt;
+		    &lt;/a&gt;
+		    &lt;br class=&quot;clear&quot;/&gt;
+		&lt;/li&gt;
+		...
+</pre>
+
+		<strong>Item detail</strong>
+		
+		<p><img src="/images/16.png"/></p>
+		
+		<p>The item detail style is inside a ul class name "content_wrapper" and a div class name "inner". Below is example code</p>
+		
+<pre>
+&lt;div id=&quot;content_wrapper&quot;&gt;
+	&lt;div class=&quot;inner&quot;&gt;
+	    &lt;h2 class=&quot;header&quot;&gt;Curabitur eu&lt;/h2&gt;
+	    &lt;p&gt;
+	    	Curabitur eu sapien eget tortor blandit pretium auctor ac metus. Curabitur eu sapien eget tortor blandit pretium auctor.
+	    &lt;/p&gt;
+	&lt;/div&gt;
+		...
+</pre>
+		
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>I'm using six CSS files in this theme. The first file contains all of the specific stylings for the page. The file is separated into sections using:</p>  
+
+<pre>	
+	/* CSS Reset */
+
+	some code
+
+	/* Global layout */
+	
+	some code
+	
+	/* Input layout */
+	
+	some code
+	
+	/* Content layout */
+	
+	some code
+</pre>
+	<br/><br/>
+
+		<p>The second file is a styling for datepicker input.</p>
+		<p>The third file is a styling for tooltips.</p>
+		<p>The fourth file is a styling for WYSIWYG input.</p>
+		<p>The fifth file is a styling for drawing graph.</p>
+		<p>The sixth file is a styling for modal window.</p>
+		
+		<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+
+</pre>
+		
+		<hr>
+		
+		<h3 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme imports nine Javascript files.</p>
+		
+		<ol>
+			<li>jQuery</li>
+			<li>jQuery UI</li>
+			<li>jQuery Image preload</li>
+			<li>jQuery Fancybox</li>
+			<li>jQuery jWYSIWYG</li>
+			<li>jQuery hint</li>
+			<li>jQuery visualize</li>
+			<li>jQuery tipsy</li>
+			<li>Browser check</li>
+			<li>FULLADMIN custom script</li>
+		</ol>
+		  
+		<ol>
+			<li>jQuery is a Javascript library that greatly reduces the amount of code that you must write.</li>
+			<li>jQuery UI is a javascript library that add many effects and interfaces to jQuery</li>
+			<li>jQuery Image preload help page preload all images in CSS</li>
+			<li>jQuery Fancybox create a nice popup window using in portfolio</li>
+			<li>jQuery jWYSIWYG create WYSIWYG input</li>
+			<li>jQuery hint create hint text for input</li>
+			<li>jQuery visualize draw graph from table data</li>
+			<li>jQuery tipsy create tooltips</li>
+			<li>Browser check check browser name and version</li>
+			<li>Most of the animation in this site is carried out from the customs scripts.</li>
+		</ol>
+		
+		
+		<hr>
+		
+		<h3 id="psdFiles"><strong>D) PSD Files</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've included one psd with this theme and it is a main layout of template (web version)</p>
+		
+		
+		<hr>
+		
+		<h3 id="credits"><strong>E) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the following script, images, icons or other files as listed.
+		
+		<ul>
+			<li>jQuery Fancybox <a href="http://fancybox.net/">http://fancybox.net/</a></li>
+			<li>jQuery Image Preload <a href="http://www.filamentgroup.com/examples/preloadImages/index_v2.php">http://www.filamentgroup.com/examples/preloadImages/index_v2.php</a></li>
+			<li>jQuery visualize <a href="http://www.filamentgroup.com/lab/update_to_jquery_visualize_accessible_charts_with_html5_from_designing_with/">http://www.filamentgroup.com/lab/update_to_jquery_visualize_accessible_charts_with_html5_from_designing_with/</a></li>
+			<li>jQuery hint <a href="http://plugins.jquery.com/project/hint">http://plugins.jquery.com/project/hint</a></li>
+			<li>jQuery jWYSIWYG <a href="http://code.google.com/p/jwysiwyg/">http://code.google.com/p/jwysiwyg/</a></li>
+			<li>jQuery tipsy <a href="http://plugins.jquery.com/project/tipsy">http://plugins.jquery.com/project/tipsy</a></li>
+			<li>Huge Mac style icon collection by ~ipapun <a href="http://ipapun.deviantart.com/art/Huge-Mac-style-icon-collection-139627832">http://ipapun.deviantart.com/art/Huge-Mac-style-icon-collection-139627832</a></li>
+			<li>Token by ~brsev <a href="http://brsev.deviantart.com/art/Token-128429570">http://brsev.deviantart.com/art/Token-128429570</a></li>
+		</ul>
+		
+
+		<hr>
+
+		
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Peerapong Pulpipatnan</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

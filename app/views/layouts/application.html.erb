@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Fatherhood</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
+  <head>
+    <title>Fatherhood</title>
+    <%= stylesheet_link_tag "screen", "tipsy", "datepicker" %> <!-- "wysiwyg", -->
+    <%# javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+  </head>
 
-<%= yield %>
-
-</body>
+  <body>
+    <!-- Begin control panel wrapper -->
+    <div id="wrapper">    
+      <!-- top bar -->
+      <%= render 'layouts/top_bar' %>
+    
+      <!-- tabs -->
+      <%= render 'layouts/tabs' %>
+      
+      <!-- Begin shortcut menu -->
+    	<%= render 'layouts/left_nav' %>
+      
+      <div id="content_wrapper">
+        <%= yield %>
+      </div>
+      
+      <br class="clear"/><br/>
+    </div> <!-- wrapper -->
+    
+  </body>
 </html>
